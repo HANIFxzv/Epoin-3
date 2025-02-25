@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\PelanggaranController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -31,6 +32,8 @@ Route::middleware('auth','admin')->group(function () {
     Route::put('/admin/akun/updateEmail/{id}', [LoginRegisterController::class, 'updateEmail'])->name('UpdateEmail');
 
     Route::put('/admin/akun/updatePassword/{id}', [LoginRegisterController::class, 'updatePassword'])->name('updatePassword');
+
+    Route::resource('/admin/pelanggaran', PelanggaranController::class);
 
     Route::delete('/admin/akun/{id}', [LoginRegisterController::class, 'destroy'])->name('akun.destroy');
 

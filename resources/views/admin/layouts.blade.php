@@ -45,8 +45,8 @@
       <ul class="menu menu-horizontal px-1">
         <li><a href="{{ route('admin.dashboard') }}" class="nav-link">Dashboard</a></li>
         <li><a href="{{ route('siswa.index') }}" class="nav-link">Data Siswa</a></li>
-       
-        <li> <a href="{{ route('admin.akun') }}" class="nav-link">Data User</a></li>
+        <li><a href="{{ route('admin.akun') }}" class="nav-link">Data User</a></li>
+        <li><a href="{{ route('pelanggaran.index') }}" class="nav-link">Data Pelanggaran</a></li>
       </ul>
     </div>
     <div class="navbar-end">
