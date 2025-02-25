@@ -1,4 +1,4 @@
-<!-- @extends('admin.layouts') -->
+@extends('admin.layouts')
 @section('content')
     @if($message = Session::get('success'))
     <p>{{$message}}</p>
